@@ -1,0 +1,155 @@
+/*global styles*/
+
+body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    background-color:hsl(0, 0%, 98%);
+    width:100%;
+}
+
+p{
+    color:hsl(229, 6%, 66%);
+    line-height:1.3;
+}
+
+h1 ,h2, h3{
+    color:hsl(234, 12%, 34%);
+}
+
+
+/*main container*/
+.main-container{
+    padding:0;
+    width:80%;
+    margin:auto;
+   
+}
+
+.container{
+    width:35%;
+    text-align:center;
+    margin:auto;
+    
+}
+
+#deli{
+    font-weight:100;
+    color:hsl(229, 6%, 66%);
+    padding:0;
+    margin:50px 0 10px 0;
+}
+
+.container h1{
+    padding:0;
+    margin:10px 0 20px 0;
+}
+
+.container p{
+    margin-bottom:50px;
+}
+.main-box{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    justify-content: center;
+    align-items: center
+}
+
+.main-box .box-1 ,.main-box .box-2 ,.main-box .box-3,.main-box .box-4{
+    background-color: white;
+    width:80%;
+    border-radius:5px;
+    padding:20px;
+    
+    box-shadow:0 0 10px hsl(229, 6%, 66%);
+}
+
+
+/*icons*/
+.main-box .box-1 .img ,.main-box .box-4 .img {
+    float:right;
+    width:50px;
+}
+
+.main-box .img{
+
+}
+.main-box .box-2 .img  ,.main-box .box-3 .img {
+    width:50px;
+    float:right;
+}
+
+
+.main-box .box-1{
+    
+    border-top:solid hsl(180, 62%, 55%) 3px;
+    order:1;
+    grid-row:1/3;
+}
+
+
+.main-box .box-2{
+    border-top:solid hsl(0, 78%, 62%) 3px;
+    order:2;
+}
+
+.main-box .box-3{
+    border-top:solid hsl(34, 97%, 64%) 3px;
+    order:4;
+    margin-top:25px;
+    grid-column: 2/3;
+    grid-row:2;
+}
+
+.main-box .box-4{
+    border-top:solid hsl(212, 86%, 64%) 3px;
+    order:3;
+    grid-row:1/3;
+}
+
+/*media query*/
+@media(max-width:700px){
+    body{
+        font-size:13px;
+    }
+    .container{
+        margin:0;
+        width:100%;
+    }
+    .main-box{
+        display:flex;
+       flex-wrap: wrap;
+    }
+    .main-box .box-1{
+        margin:0 auto;
+        width:80%;
+    }
+
+    .main-box .box-2{
+       
+        margin:20px auto;
+        width:80%;
+    }
+
+    .main-box .box-3{
+        margin:20px auto;
+        width:80%;
+    }
+
+    .main-box .box-4{
+        margin:20px auto;
+        width:80%;
+    }
+   
+    .main-box .box-1 .img{
+      position:static;
+    }
+    
+    .main-box .box-2 .img img ,.main-box .box-3 .img img{
+      
+    
+    }
+}
